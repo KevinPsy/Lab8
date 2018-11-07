@@ -1,13 +1,13 @@
 #Q1
 prime=function(n){
   
-  if(n %% 1 != 0 | n < 0){
+  if (n %% 1 != 0 | n < 0){
     return(FALSE)
   }
-  else if(n == 1){
+  else if (n == 1){
     return(FALSE)
   }
-  else if(n == 2){
+  else if (n == 2){
     return(TRUE)
   }
   else{
@@ -24,11 +24,12 @@ prime=function(n){
 
 #Q2
 find_runs=function(x,k) {
-  n=length(x)
+  n <- length(x)
   runs = NULL
-  for(i in 1:(n-k+1)) {
-    if (all(x[i:(i+k-1)]==1) )
-      runs=c(runs,i)}
+  for (i in 1:(n - k + 1)) {
+    if (all(x[i:(i + k - 1)] == 1) )
+      runs=c(runs, i)
+    }
   
   return(runs)
   
@@ -43,9 +44,9 @@ sort_vec = function(x) {
   last <- length(x)
   first <- 1
   temp <- NULL
-  for(last in length(x):2) { 
-    for(first in 1:(last - 1)) { 
-      if(x[first] > x[first + 1]) { 
+  for (last in length(x):2) { 
+    for (first in 1:(last - 1)) { 
+      if (x[first] > x[first + 1]) { 
         temp = x[first] 
         x[first] = x[first + 1] 
         x[first + 1] = temp 
